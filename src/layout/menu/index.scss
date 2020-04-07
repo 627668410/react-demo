@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+.menu-left {
+  height: calc(100% - #{$headerHeight});
+  .ant-menu-item{
+    margin-top: 0 !important;
+  }
+}
+.home-title{
+  display: block;
+  width: 100%;
+  height: $headerHeight;
+  line-height: $headerHeight;
+  background: $headerBg;
+  text-align: center;
+  font-size: 20px;
+}

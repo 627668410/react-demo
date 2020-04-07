@@ -1,0 +1,6 @@
+@import '@/styles/variables.scss';
+.main{
+  width: 100%;
+  height: calc(100% - #{$headerHeight} - #{$footerHeight});
+  padding: 20px;
+}

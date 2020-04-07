@@ -1,0 +1,6 @@
+@import '@/styles/variables.scss';
+.header{
+  width: 100%;
+  height: $headerHeight;
+  background: $headerBg;
+}
