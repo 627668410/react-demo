@@ -9,7 +9,7 @@ class Main extends Component {
   renderRoute = data =>
     data.map(menu => {
       if (menu.children) return this.renderRoute(menu.children)
-      return <Route exact path={menu.path} component={menu.component}></Route>
+      return <Route exact key={menu.value} path={menu.path} component={menu.component}></Route>
     })
 }
 export default Main

@@ -1,5 +1,6 @@
 import LoadableComponent from './loadable'
 const Home = () => import(/* webpackChunkname: 'Home' */ '@/pages/home')
+const Table = () => import(/* webpackChunkname: 'Table' */ '@/pages/table')
 const Bar = () => import(/* webpackChunkname: 'Bar' */ '@/pages/bar')
 const Line = () => import(/* webpackChunkname: 'Line' */ '@/pages/line')
 const menuList = [
@@ -8,6 +9,12 @@ const menuList = [
     value: 'home',
     path: '/home',
     component: LoadableComponent(Home)
+  },
+  {
+    name: '表格',
+    value: 'table',
+    path: '/table',
+    component: LoadableComponent(Table)
   },
   {
     name: '图表',
