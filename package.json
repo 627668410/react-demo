@@ -5,6 +5,8 @@
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^25.2.3",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "antd": "^4.1.1",
@@ -20,7 +22,7 @@
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "echarts": "^4.7.0",
+    "echarts": "^4.8.0",
     "echarts-for-react": "^2.0.15-beta.1",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.2.1",
@@ -67,6 +69,7 @@
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "2.3.5",
     "ts-pnp": "1.1.6",
+    "typescript": "^3.9.3",
     "url-loader": "2.3.0",
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3",
@@ -75,35 +78,27 @@
   },
   "scripts": {
     "commit": "npx git-cz",
+    "dev": "npm run start",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "test": "react-scripts test",
     "eject": "react-app-rewired eject"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/react": "^10.2.1",
     "babel-plugin-import": "^1.13.0",
+    "classnames": "^2.2.6",
     "customize-cra": "^0.9.1",
     "git-cz": "^4.3.1",
     "react-app-rewired": "^2.1.5"
   },
   "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
     ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
@@ -113,27 +108,10 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
       "^.+\\.module\\.(css|sass|scss)$"
     ],
-    "modulePaths": [],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ]
+    }
   },
   "babel": {
     "presets": [

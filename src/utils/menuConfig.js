@@ -3,6 +3,8 @@ const Home = () => import(/* webpackChunkname: 'Home' */ '@/pages/home')
 const Table = () => import(/* webpackChunkname: 'Table' */ '@/pages/table')
 const Bar = () => import(/* webpackChunkname: 'Bar' */ '@/pages/bar')
 const Line = () => import(/* webpackChunkname: 'Line' */ '@/pages/line')
+const Button = () => import(/* webpackChunkname: 'Button' */ '@/pages/btn')
+const Alert = () => import(/* webpackChunkname: 'Alert' */ '@/pages/alert')
 const menuList = [
   {
     name: '首页',
@@ -32,6 +34,25 @@ const menuList = [
         value: 'line',
         path: '/echart/line',
         component: LoadableComponent(Line)
+      }
+    ]
+  },
+  {
+    name: '组件',
+    value: 'component',
+    path: '/component',
+    children: [
+      {
+        name: '按钮',
+        value: 'button',
+        path: '/component/button',
+        component: LoadableComponent(Button)
+      },
+      {
+        name: '警告提示',
+        value: 'alert',
+        path: '/component/alert',
+        component: LoadableComponent(Alert)
       }
     ]
   }

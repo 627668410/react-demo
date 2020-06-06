@@ -5,3 +5,19 @@ body {
   padding: 0;
   margin: 0;
 }
+
+
+// config
+@import "variables";
+
+//layout
+@import "reset";
+
+// mixins
+@import "mixins";
+
+// button
+@import "../components/button/index";
+
+// alert
+@import "../components/alert/index"

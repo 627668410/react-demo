@@ -1,0 +1,30 @@
+.alert {
+  position: absolute;
+  top: 50px;
+  left: 20%;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  &-info {
+    background: $info;
+  }
+  &-success {
+    background: $success;
+  }
+  &-warning {
+    background: $warning;
+  }
+  &-error {
+    background: $danger;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+  }
+  .sub-content {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

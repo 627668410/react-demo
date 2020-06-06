@@ -1,4 +1,3 @@
-import 'echarts/lib/chart/bar'
 const initBarChart = ({ title, name, xAxis, data, showData }) => {
   const option = {
     title: {
